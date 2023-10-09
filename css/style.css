@@ -1,0 +1,168 @@
+@import url(https://fonts.google.com/specimen/Lexend+Deca);
+:root{
+    --VeryDarkBlue: hsl(233, 47%, 7%);
+    --DarkDesaturatedBlue: rgb(27, 25, 56);
+    --SoftViolet: rgb(170, 92, 219);
+    --WashedWhite: hsla(0, 0%, 100%, 0.75);
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Lexand Deca', sans-serif;
+}
+
+body{
+    background-color: var(--VeryDarkBlue);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    width: 1200px;
+    height: 500px;
+    background-color: var(--DarkDesaturatedBlue);
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.left_side{
+padding: 80px;
+width: 50%;
+}
+
+.left_side h1{
+    font-size: 40px;
+    margin-bottom: 40px;
+    
+}
+
+.left_side .insi{
+    color: var(--SoftViolet);
+}
+
+.left_side .paragraph{
+    margin-bottom: 70px;
+    font-size: 16px;
+    line-height: 30px;
+    padding-right: 55px;
+    color: var(--WashedWhite);
+}
+
+
+.stat_cat{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 80px;
+}
+
+.stat_cat h2{
+    margin-bottom: 5px;
+}
+
+.stat_cat span{
+    color: var(--WashedWhite);
+    text-transform: uppercase;
+    font-size: 13px;
+
+}
+
+
+.right_side{
+width: 50%;
+background-image: url('/images/image-header-desktop.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+
+.tint_overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgba(170, 92, 219, 0.651); /* Blue tint with 50% opacity */
+    pointer-events: none; /* Allows interactions with the underlying content */
+}
+
+@media screen and (max-width: 1210px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        height: 100%;
+        background-color: var(--DarkDesaturatedBlue);
+        margin: 20px auto;
+        border-radius: 10px;
+    }
+
+    .left_side{
+        order: 1;
+        padding: 40px;
+        width: 100%;
+        height: 50%;
+    }
+
+    .left_side h1{
+            font-size: 28px;
+            margin-bottom: 40px;
+            align-items: center;
+            text-align: center;
+            
+    }
+
+    .left_side .paragraph{
+            margin-bottom: 40px;
+            font-size: 17px;
+            line-height: 25px;
+            padding-right: 0px;
+            text-align: center;
+            color: var(--WashedWhite);
+    }
+
+    .stat_cat{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+        padding-right: 0px;
+        height: 200px;
+
+    }
+
+    .right_side{
+        height: 250px;
+        width: 100%;
+        order: 0;
+        background-image: url('/images/image-header-mobile.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 0px;
+        border-top-left-radius: 10px;
+    }
+
+    .tint_overlay {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 0px;
+        background-color: rgba(170, 92, 219, 0.651); /* Blue tint with 50% opacity */
+        pointer-events: none; /* Allows interactions with the underlying content */
+    }
+
+
+    
+}
